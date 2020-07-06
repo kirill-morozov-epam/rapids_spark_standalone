@@ -42,18 +42,18 @@ services:
       - "constraint:node==<yourworkernode>"
       - "PYSPARK_PYTHON=/usr/bin/python3"
       - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
-  pyspark:
-    image: rapids:pyspark
-    container_name: pyspark
-    tty: true
-    depends_on:
-      - spark-master
-    volumes:
-      - "$PWD/data:/data"
-      - "$PWD/note:/rapids/notebooks/kmor"
-    ports:
-      - "10000:8888"
-      - "10040:4040"
-    environment:
-      - "PYSPARK_PYTHON=/usr/bin/python3"
-      - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
+#  pyspark:
+#    image: rapids:pyspark
+#    container_name: pyspark
+#    tty: true
+#    depends_on:
+#      - spark-master
+#    volumes:
+#      - "$PWD/data:/data"
+#      - "$PWD/note:/rapids/notebooks/kmor"
+#    ports:
+#      - "10000:8888"
+#      - "10040:4040"
+#    environment:
+#      - "PYSPARK_PYTHON=/usr/bin/python3"
+#      - "PYSPARK_DRIVER_PYTHON=/usr/bin/python3"
